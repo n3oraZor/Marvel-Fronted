@@ -30,7 +30,7 @@ const Signup = () => {
       //si retour ok on doit avoir le token dans reponse.data.token
       response.data.token &&
         Cookies.set("token", response.data.token, { expires: 5 });
-      location.reload();
+      location.reload(navigate("/"));
       // navigate("/");
     } catch (error) {
       console.error(error.message);

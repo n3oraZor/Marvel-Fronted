@@ -53,8 +53,8 @@ function App() {
           )}
 
           {Cookies.get("token") && (
-            <Link to="">
-              <p onClick={removeCookieWhenLogOff}>Se deconnecter</p>
+            <Link to="/">
+              <p onClick={removeCookieWhenLogOff}>LOGOFF</p>
             </Link>
           )}
         </div>
