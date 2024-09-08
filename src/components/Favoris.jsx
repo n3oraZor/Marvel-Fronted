@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import useLocalStorage from "react-localstorage-hook";
 
+import "./features_style.css";
+
 const Favoris = () => {
   const getDataFromLocalStorage = localStorage.getItem("FavoriteCharacters");
   const dataFromLocalStorage = JSON.parse(getDataFromLocalStorage);
@@ -9,12 +11,12 @@ const Favoris = () => {
   //console.log(dataFromLocalStorage);
 
   return getDataFromLocalStorage ? (
-    <div>
+    <div className="favorite-container">
       {dataFromLocalStorage.map((elem, index) => {
         return (
-          <div key={index}>
-            <div>{elem.name}</div>
-            <div>{elem.description}</div>
+          <div className="container" key={index}>
+            <h2>{elem.name || "Titre indisponible"} </h2>
+            <p>{elem.description || "Description indisponible"}</p>
             <div>
               <img src={elem.photo} alt="" />
             </div>

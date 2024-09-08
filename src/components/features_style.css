@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   justify-items: center;
+  width: 100vw;
 }
 .character-container {
   display: flex;
@@ -26,18 +27,18 @@
     width: 60px;
     padding: 10px;
   }
+}
 
-  .favorite {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: yellow;
-    width: 80px;
-    height: 40px;
-    z-index: 1000;
-    transform: translateY(1px);
-    border-radius: 20px;
-  }
+.favorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: yellow;
+  width: 80px;
+  height: 40px;
+  z-index: 1000;
+  transform: translateY(1px);
+  border-radius: 20px;
 }
 
 #buttonPrecedent {
@@ -85,5 +86,55 @@
     width: 100px;
     height: auto;
     padding: 10px;
+  }
+}
+
+.favorite-container {
+  width: 100vw;
+  background: transparent;
+}
+
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+
+  .signup-container-inside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40vw;
+    background: white;
+    margin: 40px 0;
+    border-radius: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      text-align: center;
+      border-radius: 25px;
+      height: 30px;
+      margin: 10px 0;
+      border: solid 1px lightgray;
+    }
+
+    #submit {
+      text-align: center;
+      border-radius: 25px;
+      height: 30px;
+      margin: 10px 0;
+      border: solid 1px lightgray;
+      font-weight: bold;
+    }
+
+    a {
+      margin: 20px 0;
+    }
   }
 }

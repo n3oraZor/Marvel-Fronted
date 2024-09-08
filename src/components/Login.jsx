@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
 import axios from "axios";
 
+import "./features_style.css";
+
 const Login = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -14,10 +16,13 @@ const Login = () => {
   const postRequestFindUser = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("https://site--marvel-backend--6zq9tqc62vcv.code.run/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://site--marvel-backend--6zq9tqc62vcv.code.run/login",
+        {
+          email,
+          password,
+        }
+      );
 
       Cookies.set("token", response.data.token, { expires: 7 });
       location.reload(navigate("/"));
@@ -30,7 +35,7 @@ const Login = () => {
   return (
     <div className="signup-container">
       <div className="signup-container-inside">
-        <h1>Se connecter</h1>
+        <h1>CONNECT TO MY ACCOUNT</h1>
         <form onSubmit={postRequestFindUser}>
           <input
             type="email"
@@ -48,7 +53,7 @@ const Login = () => {
           />
 
           <button type="submit" id="submit">
-            Se connecter
+            CONNECT
           </button>
           <Link to="/user/signup">
             <span>Pas encore de compte ? Inscris-toi</span>

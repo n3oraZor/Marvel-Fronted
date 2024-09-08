@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import "./Characters.css";
+import "./features_style.css";
 
 const Comics = () => {
   const [data, setData] = useState(null);

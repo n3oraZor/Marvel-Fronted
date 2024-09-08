@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import useLocalStorage from "react-localstorage-hook";
 
-import "./Characters.css";
+import "./features_style.css";
 
 const initializeState = () => {
   return JSON.parse(localStorage.getItem("FavoriteCharacters")) || [{}];
