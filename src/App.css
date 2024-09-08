@@ -1,0 +1,49 @@
+#root {
+  background: #ed181f;
+}
+
+body {
+  background: #ed181f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./sources/marvelbackground.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center 380px;
+}
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#marvelLogo {
+  width: 40vw;
+}
+
+.container-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  height: 10vh;
+  width: 90vw;
+  padding: 20px 0;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 25px;
+    border: none;
+    width: 160px;
+    height: 50px;
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
